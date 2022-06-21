@@ -1,0 +1,8 @@
+.cart-widget {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.cart-widget:hover {
+  background-color: #d1d2d4;
+}
