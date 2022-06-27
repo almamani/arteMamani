@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/arteMamani/static/css/main.4c547fa7.css",
+    "main.js": "/arteMamani/static/js/main.d84c35f7.js",
+    "static/media/img_carrito.png": "/arteMamani/static/media/img_carrito.d4bfcd786e3df05ec4c8.png",
+    "index.html": "/arteMamani/index.html",
+    "main.4c547fa7.css.map": "/arteMamani/static/css/main.4c547fa7.css.map",
+    "main.d84c35f7.js.map": "/arteMamani/static/js/main.d84c35f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c547fa7.css",
+    "static/js/main.d84c35f7.js"
+  ]
+}
