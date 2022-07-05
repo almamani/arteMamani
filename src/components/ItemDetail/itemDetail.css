@@ -1,0 +1,38 @@
+.detail {
+  display: grid;
+  grid-template-columns: 350px 710px;
+  column-gap: 1.5rem;
+  align-items: center;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.detail-img {
+  width: 350px;
+  height: 460px;
+}
+
+.detail-product {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(220, 218, 218);
+  text-align: center;
+  padding: 3.5rem 2rem;
+}
+
+.card-text {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  margin: 1rem 0;
+}
+
+.card-precio {
+  font-size: 1.5rem;
+}
+
+.card-stock {
+  margin-bottom: 2rem;
+}

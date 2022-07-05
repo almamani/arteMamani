@@ -1,3 +1,27 @@
-.row {
-  margin-left: 5rem;
+@media screen and (max-width: 600px) {
+  .contenedor-articulos {
+    display: grid;
+    grid-template-columns: repeat(1, 90%);
+    row-gap: 3rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contenedor-articulos {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    row-gap: 1.5rem;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contenedor-articulos {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    row-gap: 1.5rem;
+    column-gap: 2rem;
+    margin-left: 4rem;
+  }
 }

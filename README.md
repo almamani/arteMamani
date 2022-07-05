@@ -17,3 +17,7 @@ Corresponden a los Desafios "Menú e-commerce" y "Crea tu landing" de React / Co
 # Segunda Version:
 
 Corresponden a los Desafios "Contador con Boton" y "Catálogo con MAPS y Promises" de React / Coderhouse: se incorporaron los componenetes: Item, Item List, y un Hook para manejar los estados del contador, a fin de realizar un catálogo de productos (que parten de un array), incorporados al SItio luego de una promesa, tomando el formato de tarjetas individuales con los datos de cada producto y la posibilidad de ejecutar un contador que será la cantidad a comprar (no supera el stock ni permite una cantidad menor a 1).
+
+# Tercera Version:
+
+Corresponde al Desafío "Detalle del Producto"de React / Coderhouse: se incorporaron al Proyecto Final los componenetes ItemDetail e ItemDetailContainer. Además de cargar los productos en el Home se carga puntualmente el artículo con id 1.

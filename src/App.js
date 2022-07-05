@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer mensaje="Nuestras Incorporaciones" />
+      <ItemListContainer mensaje="Nuestros Productos" />
     </>
   );
 }

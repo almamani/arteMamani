@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getData } from "../../mocks/fakeApi";
+import { getProds } from "../../mocks/fakeApi";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import ItemList from "../ItemList/ItemList.jsx";
+
 import "./ItemListContainer.css";
 
 const ItemListContainer = ({ mensaje }) => {
@@ -8,7 +10,7 @@ const ItemListContainer = ({ mensaje }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getData
+    getProds
       .then((result) => setProductList(result))
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
@@ -18,13 +20,16 @@ const ItemListContainer = ({ mensaje }) => {
     <>
       <h2>{mensaje} </h2>
       {loading ? (
-        <div class="text-center">
-          <div class="spinner-border" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div className="text-center">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       ) : (
-        <ItemList productList={productList} />
+        <>
+          <ItemList productList={productList} />
+          <ItemDetailContainer />
+        </>
       )}
     </>
   );
