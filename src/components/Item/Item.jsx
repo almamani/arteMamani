@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import "./Item.css";
 
 const Item = ({ product }) => {
@@ -15,7 +15,9 @@ const Item = ({ product }) => {
           Stock: <span>{product.stock}</span>
         </p>
         <div className="d-flex flex-row align-item-center justify-content-center">
-          <button className="btn btn-dark">Ver Detalle</button>
+          <Link to={`/detail/${product.id}`}>
+            <button className="btn btn-dark">Ver Detalle</button>
+          </Link>
         </div>
       </div>
     </div>

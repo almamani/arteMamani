@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { getProds } from "../../mocks/fakeApi";
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import ItemList from "../ItemList/ItemList.jsx";
 
 import "./ItemListContainer.css";
@@ -9,12 +9,14 @@ const ItemListContainer = ({ mensaje }) => {
   const [productList, setProductList] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const { categoryId } = useParams();
+
   useEffect(() => {
-    getProds
+    getProds(categoryId)
       .then((result) => setProductList(result))
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
-  }, []);
+  }, [categoryId]);
 
   return (
     <>
@@ -28,7 +30,6 @@ const ItemListContainer = ({ mensaje }) => {
       ) : (
         <>
           <ItemList productList={productList} />
-          <ItemDetailContainer />
         </>
       )}
     </>
