@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/arteMamani/static/css/main.5ab85a7c.css",
-    "main.js": "/arteMamani/static/js/main.3adf0057.js",
+    "main.css": "/arteMamani/static/css/main.d6f6713e.css",
+    "main.js": "/arteMamani/static/js/main.08477fbb.js",
     "static/media/img_carrito.png": "/arteMamani/static/media/img_carrito.d4bfcd786e3df05ec4c8.png",
     "index.html": "/arteMamani/index.html",
-    "main.5ab85a7c.css.map": "/arteMamani/static/css/main.5ab85a7c.css.map",
-    "main.3adf0057.js.map": "/arteMamani/static/js/main.3adf0057.js.map"
+    "main.d6f6713e.css.map": "/arteMamani/static/css/main.d6f6713e.css.map",
+    "main.08477fbb.js.map": "/arteMamani/static/js/main.08477fbb.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ab85a7c.css",
-    "static/js/main.3adf0057.js"
+    "static/css/main.d6f6713e.css",
+    "static/js/main.08477fbb.js"
   ]
 }
