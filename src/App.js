@@ -15,10 +15,7 @@ function App() {
           element={<ItemListContainer mensaje="Nuestros Productos" />}
         />
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
-        <Route
-          path="/detail/:id"
-          element={<ItemDetailContainer mensaje="Nuestros Productos" />}
-        />
+        <Route path="/detail/:id" element={<ItemDetailContainer />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </HashRouter>
