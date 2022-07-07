@@ -13,9 +13,15 @@ const ItemListContainer = ({ mensaje }) => {
 
   useEffect(() => {
     getProds(categoryId)
-      .then((result) => setProductList(result))
-      .catch((error) => console.log(error))
-      .finally(() => setLoading(false));
+      .then((res) => {
+        setProductList(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, [categoryId]);
 
   return (
