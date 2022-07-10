@@ -25,3 +25,8 @@ Corresponde al Desafío "Detalle del Producto"de React / Coderhouse: se incorpor
 # Cuarta Version:
 
 Corresponde a "La Primer Entrega del Proyecto Final" de React / Coderhouse: se incorporó al Proyecto Final la Navegación del sitio, permitiendo acceder a las distintas categorías incluidas en el Navbar, además es posible seleccionar un producto determinado haciendo click en el botón "Ver detalle", lo que permite mostrar el artículo, la info del mismo, y la posibilidad de ejecutar un contador que será la cantidad a comprar (no supera el stock ni permite una cantidad menor a 1).
+
+# Quinta Version:
+
+Corresponden a los Desafios "Sincronizar Counter" y "CartContex" de React / Coderhouse: se incorporó el componente ItemCount, separando sus funciones del ItemDetail que es quien lo llama, cuando se emite un evento Add se almacena la cantidad de intem a agregar iternamente a fin de que se puedan agregar posteriormente al carrito, una vez presionado Agregar Carrito, el ItemCoun, es reemplazado por el botón Finalizar Compra que permite navegar hacia el Carrito.
+Además se incorpora el CartContex con un contex y el custom provider, con el array de productos que serán agregados al carrito y las funcionalidades correspondientes, (Agregar, Quitar, Remover, Verificar si un componenete se encuentra en el carrito), al hacer click en Agregar al Carrito se guarda en el CartContex el producto, su cantidad en Forma de objeto y se va calculando la cantidad de productos agregados. El CartWidget toma esta cantidad de CartContex y la muestra al lado de la imagen del carrito.

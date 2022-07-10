@@ -1,9 +1,17 @@
-import React from "react";
-import { useItem } from "../../hooks/useItem";
+import React, { useContext, useState } from "react";
 import "./itemDetail.css";
+import { cartContext } from "../../context/CartContext";
+import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ product }) => {
-  const { count, amount } = useItem(product.stock);
+  const [buyfinalized, setBuyFinalized] = useState(false);
+  const { addCartProduct } = useContext(cartContext);
+
+  const onAdd = (amount) => {
+    addCartProduct({ ...product, cantidad: amount });
+    setBuyFinalized(true);
+  };
 
   return (
     <div className="detail">
@@ -19,17 +27,14 @@ const ItemDetail = ({ product }) => {
         <p className="card-stock">
           Stock: <span>{product.stock}</span>
         </p>
-        <div className="card-amount d-flex flex-row align-item-center display-3 justify-content-center">
-          <button onClick={() => count(-1)} className="btn btn-dark  display-3">
-            -
-          </button>
-          <span className="d-flex flex-row  p-2">{amount}</span>
-          <button onClick={() => count(+1)} className="btn btn-dark display-3">
-            +
-          </button>
-        </div>
-        <div className="d-flex flex-row align-item-center justify-content-center mt-3">
-          <button className="btn btn-dark">Agregar al Carrito</button>
+        <div>
+          {buyfinalized ? (
+            <Link to="/cart">
+              <button className="btn btn-dark">Finalizar la Compra</button>
+            </Link>
+          ) : (
+            <ItemCount stock={product.stock} onAdd={onAdd} />
+          )}
         </div>
       </div>
     </div>
