@@ -4,12 +4,16 @@ export const cartContext = createContext();
 const { Provider } = cartContext;
 
 const CartCustomProvider = ({ children }) => {
-  // Productos del Carrito y Modif Productos del Carrito
   const [productsCart, setProductsCart] = useState([]);
   const [qtyProducts, setQtyProducts] = useState(0);
+  const [totalProducts, setTotalProducts] = useState(0);
 
   useEffect(() => {
     getQtyCarProducts();
+  }, [productsCart]);
+
+  useEffect(() => {
+    getTotalProducts();
   }, [productsCart]);
 
   const addCartProduct = (product) => {
@@ -25,7 +29,8 @@ const CartCustomProvider = ({ children }) => {
   };
 
   const deleteCartProduct = (id) => {
-    productsCart.filter((productCart) => productCart.id !== id);
+    const aux = productsCart.filter((productCart) => productCart.id !== id);
+    setProductsCart(aux);
   };
 
   const isInCart = (id) => {
@@ -38,9 +43,18 @@ const CartCustomProvider = ({ children }) => {
     setQtyProducts(qty);
   };
 
+  const getTotalProducts = () => {
+    let total = 0;
+    productsCart.forEach(
+      (productCart) => (total += productCart.cantidad * productCart.precio)
+    );
+    setTotalProducts(total);
+  };
+
   const clearCart = () => {
     setProductsCart([]);
     setQtyProducts(0);
+    setTotalProducts(0);
   };
 
   return (
@@ -51,9 +65,10 @@ const CartCustomProvider = ({ children }) => {
         deleteCartProduct,
         clearCart,
         qtyProducts,
+        totalProducts,
       }}
     >
-      {children};
+      {children}
     </Provider>
   );
 };

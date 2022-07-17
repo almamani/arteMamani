@@ -1,0 +1,14 @@
+.container-product {
+  text-align: center;
+}
+
+.btn-dark:hover {
+  background-color: rgb(131, 12, 12);
+  border-color: rgb(131, 12, 12);
+}
+
+.total-text {
+  color: rgb(214, 51, 51);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
