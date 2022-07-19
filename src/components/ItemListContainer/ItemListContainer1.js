@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getProds } from "../../mocks/fakeApi";
 import ItemList from "../ItemList/ItemList.jsx";
 import "./ItemListContainer.css";
 import { db } from "../../firebase/firebase";
@@ -13,16 +14,21 @@ const ItemListContainer = ({ mensaje }) => {
   let productsConsult;
 
   useEffect(() => {
+
     const productsCollection = collection(db, "productos");
-    if (categoryId) {
       const productsQuery = query(
-        productsCollection,
-        where("categoria", "==", categoryId)
-      );
-      productsConsult = productsQuery;
-    } else {
-      productsConsult = productsCollection;
-    }
+      productsCollection,
+      where("categoria", "==", categoryId)
+    
+    
+    );
+  
+    
+if (categoryId) {
+productsConsult = productsQuery;
+} else {
+  productsConsult = productsCollection;  
+}
 
     getDocs(productsConsult)
       .then((result) => {
@@ -41,7 +47,7 @@ const ItemListContainer = ({ mensaje }) => {
         setLoading(false);
       });
   }, [categoryId]);
-  console.log(productList);
+
   return (
     <>
       <h2>{mensaje} </h2>

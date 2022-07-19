@@ -46,3 +46,9 @@ Corresponden al Desafío "Cart View" de React / Coderhouse:
 
 - Componente CartWidget:
   • Muestra la cantidad total de productos solo cuando hay productos en el carrito (no muestra el 0).
+
+# Septima Version:
+
+Corresponden al Desafío "Item Colecction" de React / Coderhouse:
+
+Una vez eliminado el async mocks se conectó la collección de productos (documentos) de Firestore a los componentes ItemListContainer y al ItemDetailContainer. Se permite la navegación entre categorías y el acceso a un producto determinado.
