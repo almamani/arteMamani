@@ -41,7 +41,7 @@ const ItemListContainer = ({ mensaje }) => {
         setLoading(false);
       });
   }, [categoryId]);
-  console.log(productList);
+
   return (
     <>
       <h2>{mensaje} </h2>

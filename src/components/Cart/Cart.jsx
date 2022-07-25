@@ -1,12 +1,19 @@
 import React from "react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { cartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import CartProduct from "../CartProduct/CartProduct";
 import "./Cart.css";
+import Venta from "../Venta/Venta";
 
 const Cart = () => {
   const { productsCart, totalProducts, clearCart } = useContext(cartContext);
+
+  const [buyFinalized, setBuyFinalized] = useState(false);
+
+  const finishBuy = () => {
+    setBuyFinalized(true);
+  };
 
   if (productsCart.length === 0) {
     return (
@@ -37,6 +44,17 @@ const Cart = () => {
           <button onClick={() => clearCart()} className="btn btn-dark">
             Vaciar Carrito
           </button>
+        </div>
+        <div>
+          {buyFinalized ? (
+            <Venta />
+          ) : (
+            <div className="d-flex flex-row align-item-center justify-content-center mt-3">
+              <button onClick={finishBuy} className="btn btn-dark">
+                Finalizar la Compra
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -14,10 +14,18 @@ const Item = ({ product }) => {
         <p className="card-stock">
           Stock: <span>{product.stock}</span>
         </p>
-        <div className="d-flex flex-row align-item-center justify-content-center">
-          <Link to={`/detail/${product.id}`}>
-            <button className="btn btn-dark">Ver Detalle</button>
-          </Link>
+        <div>
+          {product.stock === 0 ? (
+            <div>
+              <p className="card-sinstock">Producto sin Stock</p>
+            </div>
+          ) : (
+            <div className="d-flex flex-row align-item-center justify-content-center">
+              <Link to={`/detail/${product.id}`}>
+                <button className="btn btn-dark">Ver Detalle</button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>

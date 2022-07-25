@@ -52,3 +52,13 @@ Corresponden al Desafío "Cart View" de React / Coderhouse:
 Corresponden al Desafío "Item Colecction" de React / Coderhouse:
 
 Una vez eliminado el async mocks se conectó la collección de productos (documentos) de Firestore a los componentes ItemListContainer y al ItemDetailContainer. Se permite la navegación entre categorías y el acceso a un producto determinado.
+
+# Octava Version:
+
+Corresponde al Desafío "Item Colecction II" de React / Coderhouse:
+
+- Componente Venta: Permite guardar en Firebase, los datos del comprador y los productos adquiridos , se accede a este componente, haciendo click en "Finalizar la Compra". En caso de que el cliente quite todos los productos del carrito, se regresa a la vista de "Carrito Vacío, comience a comprar".
+  • El componente venta cuenta con un formulario para tomar los datos del cliente, el mismo no se envía si algún campo está vacío.
+  • Una vez lleno el formulario, al hacer click en "Enviar Compra" como respuesta se emite un Sweet Alert con un mensaje de confirmación y el id de la operación realizada proveniente de Firebase, posteriormente se vacía el carrito y utilizando el Hook Navigate se redirecciona al cliente al Home .
+  • Se recorren los productos modificando el stock de acuerdo a la compra realizada
+  En caso de que un producto alcance el stock 0 se reemplaza el botón mostrar detalle, por un mensaje que indica que el producto se encuentra sin stock . De esa manera se evita el uso indevido del list count ya que no se pueden agregar productos sin stock.
