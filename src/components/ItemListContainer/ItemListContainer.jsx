@@ -44,7 +44,7 @@ const ItemListContainer = ({ mensaje }) => {
 
   return (
     <>
-      <h2>{mensaje} </h2>
+      {categoryId ? <h2>{categoryId}</h2> : <h2>{mensaje}</h2>}
       {loading ? (
         <div className="text-center">
           <div className="spinner-border" role="status">

@@ -17,7 +17,7 @@ import "./Venta.css";
 const Venta = () => {
   const { productsCart, totalProducts, clearCart } = useContext(cartContext);
   const [idVenta, setIdVenta] = useState("");
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const initialSatateValues = {
     nombre: " ",
     apellido: " ",
@@ -37,7 +37,12 @@ const Venta = () => {
     const ventasCollection = collection(db, "ventas");
     addDoc(ventasCollection, {
       datosComprador,
-      items: productsCart,
+      items: productsCart.map((product) => ({
+        id: product.id,
+        nombre: product.nombre,
+        precio: product.precio,
+        cantidad: product.cantidad,
+      })),
       fecha: serverTimestamp(),
       total: totalProducts,
     }).then((result) => {
@@ -59,7 +64,8 @@ const Venta = () => {
     Swal.fire({
       icon: "success",
       title: "Confirmación",
-      html: `<p>Recibimos correctamente tu compra, el identificador de la misma es:<p>${idVenta}`,
+      confirmButtonColor: "#BB1111",
+      html: `<p>Recibimos correctamente tu compra, en breve nos comunicaremos para acordar pago y entrega, el identificador de la compra es:<p>${idVenta}`,
       confirmButtonText: "Aceptar",
     }).then((result) => {
       if (result.isConfirmed) {

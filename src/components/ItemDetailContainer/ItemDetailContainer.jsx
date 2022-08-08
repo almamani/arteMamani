@@ -15,8 +15,9 @@ const ItemDetailContainer = () => {
     getDoc(refDoc)
       .then((result) => {
         setProduct({
-          id:id,
-          ...result.data()});
+          id: id,
+          ...result.data(),
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -29,7 +30,11 @@ const ItemDetailContainer = () => {
   return (
     <div>
       {loading ? (
-        <h2>Cargando...</h2>
+        <div className="text-center mt-5">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden"></span>
+          </div>
+        </div>
       ) : (
         <>
           <div className="container">

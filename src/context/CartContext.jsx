@@ -9,11 +9,14 @@ const CartCustomProvider = ({ children }) => {
   const [totalProducts, setTotalProducts] = useState(0);
 
   useEffect(() => {
-    getQtyCarProducts();
-  }, [productsCart]);
+    const localData = JSON.parse(localStorage.getItem("carritoMariArt"));
+    setProductsCart(localData);
+  }, []);
 
   useEffect(() => {
+    getQtyCarProducts();
     getTotalProducts();
+    localStorage.setItem("carritoMariArt", JSON.stringify(productsCart));
   }, [productsCart]);
 
   const addCartProduct = (product) => {
