@@ -1,14 +1,12 @@
 > ![logo MariArt](./src/assets/img/logo.png)
 
-Fuente: https://www.iteramos.com/pregunta/20930/markdown-y-alineacion-de-imagenes
-
-> #### Descripción del Proyecto:
+> ### Descripción del Proyecto:
 
 <p>Sitio Web desarrollado para la venta de Obras de Arte y Accesorios de Decoración.</p>
 
 ##### GitHub Pages: https://almamani.github.io/arteMamani/
 
-> #### Funcionamiento y Características:
+> ### Funcionamiento y Características:
 
 **Componente Navbar:**
 
@@ -45,14 +43,14 @@ Fuente: https://www.iteramos.com/pregunta/20930/markdown-y-alineacion-de-imagene
   En caso de que un producto alcance el stock 0 se reemplaza el botón mostrar detalle, por un mensaje que indica que el producto se encuentra sin stock . De esa manera se evita el uso indevido del list count ya que no se pueden agregar productos sin stock.
   Además se respalda todo en LocalStorage para no perder la compra al recargar o volver a la página
 
-> #### Herramientas utilizadas:
+> ### Herramientas utilizadas:
 
 - React.
 - Firebase.
 - Bootstrap: para incorporar spinner (al cargar los productos, al ingresar al detalle del artículo seleccionado), y para algunos estilos.
 - Sweet alert 2: uso de un mensaje al finalizar la compra.
 
-> #### Para Probar el Repositorio del Proyecto:
+> ### Para Probar el Repositorio del Proyecto:
 
 **_1. Clonar Repositorio:_** git clone https://github.com/almamani/arteMamani
 **_2. Dentro de la carpeta del proyecto ejecutar:_** npm install
