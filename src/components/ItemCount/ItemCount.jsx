@@ -1,17 +1,20 @@
 import React from "react";
+import "./ItemCount.css";
 import { useItem } from "../../hooks/useItem";
+
+
 
 const ItemCount = ({ stock, onAdd }) => {
   const { count, amount } = useItem(stock);
 
   return (
     <>
-      <div className="card-amount d-flex flex-row align-item-center display-3 justify-content-center">
-        <button onClick={() => count(-1)} className="btn btn-dark  display-3">
+      <div className="amount-button-op">
+        <button onClick={() => count(-1)} className="btn btn-dark">
           -
         </button>
-        <span className="d-flex flex-row  p-2">{amount}</span>
-        <button onClick={() => count(+1)} className="btn btn-dark display-3">
+        <span className="amount-qt">{amount}</span>
+        <button onClick={() => count(+1)} className="btn btn-dark">
           +
         </button>
       </div>

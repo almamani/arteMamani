@@ -19,12 +19,12 @@ const ItemDetail = ({ product }) => {
         <img src={product.img} className="detail-img" alt={product.nombre} />
       </div>
       <div className="detail-product">
-        <h5 className="card-title">{product.nombre}</h5>
-        <p className="card-text">{product.descripcion}</p>
-        <p className="card-precio">
+        <h5 className="detail-title">{product.nombre}</h5>
+        <p className="detail-text">{product.descripcion}</p>
+        <p className="detail-precio">
           $ <span>{product.precio}</span>
         </p>
-        <p className="card-stock">
+        <p className="detail-stock">
           Stock: <span>{product.stock}</span>
         </p>
         <div>

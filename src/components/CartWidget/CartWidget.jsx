@@ -13,7 +13,9 @@ const CartWidget = () => {
       <Link to="/cart">
         <button className="btn-carrito" />
       </Link>
-      {qtyProducts > 0 && <p className="cart-cantidad">{qtyProducts}</p>}
+      <div>
+        {qtyProducts > 0 && <div className="cart-cantidad">{qtyProducts}</div>}
+      </div>
     </div>
   );
 };

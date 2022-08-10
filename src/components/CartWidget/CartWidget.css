@@ -2,32 +2,23 @@
   display: flex;
 }
 
-.cart-imagen {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.cart-imagen:hover {
-  background-color: #d1d2d4;
-}
-
 .cart-cantidad {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   color: rgb(214, 51, 51);
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 
 .btn-carrito {
-  background-image:url(../../assets/img/ico_carrito.png);
-  background-repeat:no-repeat;
-  height:28px;
-  width:33px;
-  background-position:center;
+  background-image: url(../../assets/img/ico_carrito.png);
+  background-repeat: no-repeat;
+  height: 28px;
+  width: 33px;
+  background-position: center;
   border: none;
-
 }
 
 .btn-carrito:hover {
-  background-image:url(../../assets/img/ico_carrito1.png);
-  }
+  background-image: url(../../assets/img/ico_carrito1.png);
+  cursor: pointer;
+}

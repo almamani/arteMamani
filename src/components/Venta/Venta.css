@@ -1,4 +1,29 @@
-.container-form {
+.formulario {
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.5rem;
   width: 800px;
-  margin: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(220, 218, 218);
+}
+
+.Input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(220, 218, 218);
+  font-size: 1.2rem;
+}
+
+.formSubmit {
+  width: 100%;
 }

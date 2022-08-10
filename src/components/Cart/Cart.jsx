@@ -37,10 +37,10 @@ const Cart = () => {
             <CartProduct key={product.id} product={product} />
           ))}
         </div>
-        <div className="d-flex flex-row align-item-center justify-content-center mt-3">
+        <div className="cart-element">
           <p className="total-text">Total: ${totalProducts}</p>
         </div>
-        <div className="d-flex flex-row align-item-center justify-content-center">
+        <div className="cart-element">
           <button onClick={() => clearCart()} className="btn btn-dark">
             Vaciar Carrito
           </button>
@@ -49,7 +49,7 @@ const Cart = () => {
           {buyFinalized ? (
             <Venta />
           ) : (
-            <div className="d-flex flex-row align-item-center justify-content-center mt-3">
+            <div className="cart-element">
               <button onClick={finishBuy} className="btn btn-dark">
                 Finalizar la Compra
               </button>

@@ -1,9 +1,16 @@
+.container {
+  max-width: 1155px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+
 @media screen and (max-width: 600px) {
   .contenedor-articulos {
     display: grid;
     grid-template-columns: repeat(1, 90%);
     row-gap: 3rem;
-    justify-content: center;
   }
 }
 
@@ -21,7 +28,6 @@
     display: grid;
     grid-template-columns: repeat(3, 30%);
     row-gap: 1.5rem;
-    column-gap: 2rem;
-    margin-left: 4rem;
+    column-gap: 4rem;
   }
 }

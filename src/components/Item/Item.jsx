@@ -4,23 +4,23 @@ import "./Item.css";
 
 const Item = ({ product }) => {
   return (
-    <div className="card">
-      <img src={product.img} className="card-img-top" alt={product.nombre} />
-      <div className="card-body">
-        <h5 className="card-title">{product.nombre}</h5>
-        <p className="card-precio">
+    <div className="item">
+      <img src={product.img} className="item-img" alt={product.nombre} />
+      <div className="item-body">
+        <h5 className="item-title">{product.nombre}</h5>
+        <p className="item-precio">
           $ <span>{product.precio}</span>
         </p>
-        <p className="card-stock">
+        <p className="item-stock">
           Stock: <span>{product.stock}</span>
         </p>
-        <div>
+        <div className="item-button">
           {product.stock === 0 ? (
             <div>
-              <p className="card-sinstock">Producto sin Stock</p>
+              <p className="item-sinstock">Producto sin Stock</p>
             </div>
           ) : (
-            <div className="d-flex flex-row align-item-center justify-content-center">
+            <div>
               <Link to={`/detail/${product.id}`}>
                 <button className="btn btn-dark">Ver Detalle</button>
               </Link>

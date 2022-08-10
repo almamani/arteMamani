@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList.jsx";
-import "./ItemListContainer.css";
 import { db } from "../../firebase/firebase";
 import { getDocs, collection, query, where } from "firebase/firestore";
+import FadeLoader from "react-spinners/FadeLoader";
+import "./ItemListContainer.css";
 
 const ItemListContainer = ({ mensaje }) => {
   const [productList, setProductList] = useState([]);
@@ -43,20 +44,19 @@ const ItemListContainer = ({ mensaje }) => {
   }, [categoryId]);
 
   return (
-    <>
+    <div className="categoria">
       {categoryId ? <h2>{categoryId}</h2> : <h2>{mensaje}</h2>}
       {loading ? (
-        <div className="text-center">
-          <div className="spinner-border" role="status">
-            <span className="visually-hidden"></span>
-          </div>
+        <div className="spinner">
+          <FadeLoader color="#756d6d" size={150} />
+          <span>Cargando...</span>
         </div>
       ) : (
         <>
           <ItemList productList={productList} />
         </>
       )}
-    </>
+    </div>
   );
 };
 

@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { db } from "../../firebase/firebase";
 import { doc, getDoc, collection } from "firebase/firestore";
+import FadeLoader from "react-spinners/FadeLoader";
+import "./ItemDetailContainer.css";
+
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
@@ -30,10 +33,9 @@ const ItemDetailContainer = () => {
   return (
     <div>
       {loading ? (
-        <div className="text-center mt-5">
-          <div className="spinner-border" role="status">
-            <span className="visually-hidden"></span>
-          </div>
+        <div className="spinner">
+          <FadeLoader color="#756d6d" size={150} />
+          <span>Cargando...</span>
         </div>
       ) : (
         <>

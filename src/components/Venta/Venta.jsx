@@ -82,40 +82,34 @@ const Venta = () => {
   }, [idVenta]);
 
   return (
-    <div className="container-form mt-5">
-      <div className="row">
-        <form className="card card-body" onSubmit={handleSubmit}>
-          <h2>Ingresa tus Datos</h2>
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control mb-3"
-              placeholder="Ingrese Nombre"
-              name="nombre"
-              onChange={handleInputChange}
-              required
-            />
-            <input
-              type="text"
-              className="form-control mb-3"
-              placeholder="Ingrese Apellido"
-              name="apellido"
-              onChange={handleInputChange}
-              required
-            />
-            <input
-              type="e_mail"
-              className="form-control mb-3"
-              placeholder="Ingrese Email"
-              name="email"
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-          <button className="btn btn-dark">Enviar Compra</button>
-        </form>
-      </div>
-    </div>
+    <form className="formulario" onSubmit={handleSubmit}>
+      <h2>Ingresá tus Datos</h2>
+      <input
+        type="text"
+        className="Input"
+        placeholder="Ingrese Nombre"
+        name="nombre"
+        onChange={handleInputChange}
+        required
+      />
+      <input
+        type="text"
+        className="Input"
+        placeholder="Ingrese Apellido"
+        name="apellido"
+        onChange={handleInputChange}
+        required
+      />
+      <input
+        type="e_mail"
+        className="Input"
+        placeholder="Ingrese Email"
+        name="email"
+        onChange={handleInputChange}
+        required
+      />
+      <button className="btn btn-dark formSubmit">Enviar Compra</button>
+    </form>
   );
 };
 

@@ -12,7 +12,7 @@ function App() {
     <HashRouter>
       <CartCustomProvider>
         <NavBar />
-        <Routes>
+           <Routes>
           <Route
             path="/"
             element={<ItemListContainer mensaje="Nuestros Productos" />}
@@ -24,6 +24,7 @@ function App() {
         </Routes>
       </CartCustomProvider>
     </HashRouter>
+  
   );
 }
 export default App;
