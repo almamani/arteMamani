@@ -47,11 +47,11 @@
 
 - React.
 - Firebase.
-- Bootstrap: para incorporar spinner (al cargar los productos, al ingresar al detalle del artículo seleccionado), y para algunos estilos.
-- Sweet alert 2: uso de un mensaje al finalizar la compra.
+- React-Spinners.
+- Sweet alert 2.
 
 > ### Para Probar el Repositorio del Proyecto:
 
-**_1. Clonar Repositorio:_** git clone https://github.com/almamani/arteMamani
-**_2. Dentro de la carpeta del proyecto ejecutar:_** npm install
-**_3. Posteriormente ejecutar:_** npm start
+1. Clonar Repositorio: git clone https://github.com/almamani/arteMamani
+2. Dentro de la carpeta del proyecto ejecutar: npm install
+3. Posteriormente ejecutar: npm start
