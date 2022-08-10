@@ -8,7 +8,6 @@ import Venta from "../Venta/Venta";
 
 const Cart = () => {
   const { productsCart, totalProducts, clearCart } = useContext(cartContext);
-
   const [buyFinalized, setBuyFinalized] = useState(false);
 
   const finishBuy = () => {
@@ -18,12 +17,12 @@ const Cart = () => {
   if (productsCart.length === 0) {
     return (
       <div className="container">
-        <h2>
+        <div className="titulo-text">
           Tu Carrito está vacío
           <Link to="/">
             <button className="btn btn-dark">Iniciar la Compra</button>
           </Link>
-        </h2>
+        </div>
       </div>
     );
   }
@@ -31,7 +30,7 @@ const Cart = () => {
   return (
     <div>
       <h2>Tu Carrito de Compras: </h2>
-      <div className="container">
+      <div className="container-product">
         <div className="row">
           {productsCart.map((product) => (
             <CartProduct key={product.id} product={product} />

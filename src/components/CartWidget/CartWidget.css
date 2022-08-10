@@ -21,4 +21,9 @@
 .btn-carrito:hover {
   background-image: url(../../assets/img/ico_carrito1.png);
   cursor: pointer;
+  background-repeat: no-repeat;
+  height: 28px;
+  width: 33px;
+  background-position: center;
+  border: none;
 }

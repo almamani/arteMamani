@@ -83,7 +83,7 @@ const Venta = () => {
 
   return (
     <form className="formulario" onSubmit={handleSubmit}>
-      <h2>Ingresá tus Datos</h2>
+      <div className="titulo-text">Ingresá tus Datos</div>
       <input
         type="text"
         className="Input"
