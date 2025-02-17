@@ -4,7 +4,6 @@
 
 <p>Sitio Web desarrollado para la venta de Obras de Arte y Accesorios de Decoración.</p>
 
-##### GitHub Pages: https://almamani.github.io/arteMamani/
 
 > ### Funcionamiento y Características:
 
